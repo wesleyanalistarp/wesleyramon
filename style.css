@@ -1,0 +1,390 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+header {
+  width: 100%;
+}
+
+.header-contenct {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+i {
+  color: #fff;
+}
+
+.header-icon {
+  display: flex;
+  gap: 14px;
+}
+
+.header-icon a:hover i {
+  -webkit-animation: translateY 0.8s infinite alternate;
+          animation: translateY 0.8s infinite alternate;
+  color: #d34040;
+}
+
+@-webkit-keyframes translateY {
+  from {
+    transform: translateY(0) scale(1);
+  }
+  to {
+    transform: translateY(-8px) scale(1.1);
+  }
+}
+
+@keyframes translateY {
+  from {
+    transform: translateY(0) scale(1);
+  }
+  to {
+    transform: translateY(-8px) scale(1.1);
+  }
+}
+.header-booton {
+  border: 1px solid #fff;
+  padding: 8px 35px;
+  margin: 0px 0px;
+  border-radius: 4px;
+  color: #fff;
+  background-color: transparent;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.header-booton:hover {
+  border: 1px solid #d34040;
+  background-color: #d34040;
+  transition: background-color 0.8s;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 14px;
+}
+
+.header-logo img {
+  width: 20%;
+  height: 20%;
+}
+
+/*responsividade mobile*/
+@media (max-width: 768px) {
+  .header-contenct {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .header-contenct i {
+    margin-top: 16px;
+    font-size: 34px;
+  }
+  .header-logo img {
+    width: 160px;
+    margin-top: 45px;
+  }
+  .header-booton {
+    display: none;
+  }
+}
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 8px;
+}
+
+.b-home {
+  position: relative;
+}
+
+.b-home:before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #06121e), url("../asset/img/fundo2.jpg");
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  opacity: 0.9;
+}
+
+/*hero */
+.hero {
+  color: #fff;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+}
+.hero h1 {
+  text-align: center;
+  line-height: 150%;
+  max-width: 940px;
+  font-size: 48px;
+}
+.hero p {
+  text-align: center;
+  margin: 14px 0;
+}
+
+.button-contact {
+  padding: 15px;
+  color: #fff;
+  background-color: #d94140;
+  border: 0;
+  font-size: 15px;
+  font-weight: 600;
+  margin: 14px 0;
+  border-radius: 5px;
+}
+
+.button-contact:hover {
+  -webkit-animation: scaleButtom 0.8s alternate infinite;
+          animation: scaleButtom 0.8s alternate infinite;
+}
+
+@-webkit-keyframes scaleButtom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.07);
+  }
+}
+
+@keyframes scaleButtom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.07);
+  }
+}
+@media (max-width: 768px) {
+  .hero {
+    min-height: 60vh;
+  }
+  .hero h1 {
+    font-size: 34px;
+    padding: 0 14px;
+    width: 100%;
+  }
+  .hero p {
+    font-size: 14px;
+  }
+}
+.about {
+  background-color: #06121e;
+  overflow: hidden;
+  color: #fff;
+}
+
+.about-contenct {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 34px 14px 54px 14px;
+}
+.about-contenct img {
+  max-width: 560px;
+}
+
+.about-contenct {
+  flex: 1;
+}
+
+.about-descricao h2 {
+  font-size: 38px;
+  margin-bottom: 24px;
+}
+.about-descricao h2 p {
+  margin-bottom: 14px;
+  line-height: 150%;
+}
+
+@media (max-width: 768px) {
+  .about-contenct {
+    flex-direction: column;
+  }
+}
+.service {
+  background-color: #fff;
+  color: #232224;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 54px 14px;
+}
+
+.service-contenct h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 38px;
+  margin-bottom: 14px;
+}
+
+.service-contenct p {
+  line-height: 150%;
+  margin-bottom: 14px;
+  text-align: center;
+  max-width: 780px;
+}
+
+.recortes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 0 44px 34px 44px;
+}
+
+.recortes1 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px -1px 17px -4px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+}
+.recortes1 img {
+  width: 100%;
+  max-width: 354px;
+  transition: transform 0.2s;
+}
+
+.recortes img:hover {
+  transform: scale(1.2);
+  z-index: 1;
+}
+
+.recortes2 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 14px;
+  background-color: #fff;
+  z-index: 99;
+}
+
+.recortes2 button {
+  color: #fff;
+  background-color: #d94140;
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 0;
+  cursor: default;
+}
+
+/*responsividade*/
+@media (max-width: 768px) {
+  .recortes {
+    flex-direction: column;
+  }
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 54px 0;
+  gap: 24px;
+  color: #fff;
+}
+.footer p {
+  text-align: center;
+}
+
+.footer-icon {
+  display: flex;
+  gap: 8px;
+  color: #fff;
+}
+
+.footer img {
+  width: 150px;
+  height: 200px;
+}
+
+.botao-whatsapp {
+  position: fixed;
+  bottom: 14px;
+  right: 24px;
+  z-index: 99;
+}
+.botao-whatsapp img {
+  max-width: 150px;
+  transition: transform 0.4s;
+}
+.botao-whatsapp img:hover {
+  transform: scale(1.15);
+}
+
+.botao-whatsapp .tooltip-text {
+  visibility: hidden;
+  position: absolute;
+  width: 120px;
+  top: 8px;
+  left: -144px;
+  padding: 4px;
+  border-radius: 8px;
+  text-align: center;
+  background-color: #232224;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.botao-whatsapp:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .botao-whatsapp img {
+    max-width: 90px;
+  }
+}
+body {
+  font-family: "Sora", sans-serif;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: #06121e;
+}
+
+button {
+  font-family: "Sora", sans-serif;
+  cursor: pointer;
+}
+
+svg {
+  width: 100%;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}/*# sourceMappingURL=style.css.map */
